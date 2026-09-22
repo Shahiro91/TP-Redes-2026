@@ -379,7 +379,7 @@ La Red de Área Personal (PAN) es un entorno de conectividad de cortísimo alcan
 **Red GAN (Global Area Network)**
 La Red de Área Global (GAN) representa el peldaño definitivo en la escala de conectividad. Es una infraestructura global interconectada que da soporte a las comunicaciones móviles transcontinentales, unificando redes WAN mediante infraestructuras globales de satélite y redes de telecomunicaciones internacionales.
 
-**33 Experiencia en Redes:**
+**33. Experiencia en Redes:**
 - Sergio Lezcano: No tengo experiencia. 
 
 
