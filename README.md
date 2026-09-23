@@ -3,7 +3,7 @@ Trabajo grupal ifts 18 - 2026
 # Integrantes 
 ## GRUPO D:
 * Lezcano, Sergio.
-* Roth Oscar
+* Roth Norberto Oscar
 * Tassara Daniela
 * Quintana, María Florencia
 
