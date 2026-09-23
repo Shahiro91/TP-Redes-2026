@@ -26,9 +26,13 @@ Las principales ventajas de las VLANs son:
 Pese a que las VLAN ofrecen ventajas como segmentación de redes, seguridad y gestión eficiente del tráfico, también tienen una serie de desventajas que deberíamos conocer antes de su configuración:
 
 **- Complejidad en el mantenimiento:** No solo la configuración e instalación requieren de conocimientos, sino también el mantenimiento, por lo que, pese a que contratemos a alguien para la puesta a punto, tendremos que tener nociones posteriores, o contratar a alguien siempre, algo que puede ser muy costosos o requerir de aprendizaje avanzado si no lo tenemos.
+
 **- Escalabilidad limitada:** Algunos switches tienen límites en la cantidad de VLANs que pueden soportar, por lo que si hablamos de gestionar muchas VLANs en grandes infraestructuras, puede ser engorroso y poco eficiente.
+
 **- Problemas de rendimiento:** Si se manejan muchas VLANs en el mismo equipo (como un switch o router), podría haber sobrecarga de procesamiento, por lo que si hablamos de algo simple, puede ir muy bien, pero a nivel de escalabilidad, como comentábamos ahora, se puede poner complicado todo.
+
 **- Seguridad:** Si no se implementan bien las políticas de seguridad (como el uso adecuado de VLAN hopping o storm control), una VLAN puede ser vulnerable a ataques (por ejemplo, ataques de VLAN hopping). 
+
 **- Compatibilidad:** Todos los dispositivos en la red deben ser compatibles con VLANs y el estándar 802.1Q. Esto podría limitar mucho las opciones de hardware, obligándonos a adquirir nuevos sustitutos, lo que se vería reflejado en un incremento de gasto.
 
 **Tipos de VLAN**
