@@ -8,94 +8,65 @@ Trabajo grupal ifts 18 - 2026
 * Quintana, María Florencia
 
 ## Preguntas:
-1. ¿Qué es una VLAN?
-   Las VLAN o también conocidas como «Virtual LAN» nos permite crear redes lógicamente independientes dentro de la misma red física, haciendo uso de switches gestionables que soportan VLANs para segmentar adecuadamente la red. También es muy importante que los routers que utilicemos soportan VLAN, de lo contrario, no podremos gestionarlas todas ni permitir o denegar la comunicación entre ellas. 
 
-Las principales ventajas de las VLANs son:
+## 1. VLAN (Virtual Local Area Network)
 
-- **Seguridad**. Las VLAN nos permite crear redes lógicamente independientes, por tanto, podemos aislarlas para que solamente tengan conexión a Internet, y denegar el tráfico de una VLAN a otra. Por defecto no se permite a las VLANs intercambiar tráfico con otra VLAN, es totalmente necesario ascender a nivel de red (L3) con un router o un switch multicapa, con el objetivo de activar el inter-vlan routing, es decir, el enrutamiento entre VLANs para sí permitir la comunicación entre ellas siempre que lo necesitemos.
-- **Segmentación**. Las VLAN nos permite segmentar todos los equipos en diferentes subredes, a cada subred le asignaremos una VLAN diferente. 
-- **Flexibilidad**. Gracias a las VLAN podremos colocar a los diferentes equipos en una subred o en otra, de manera fácil y rápida, y tener unas políticas de comunicación donde permitimos o denegamos el tráfico hacia otras VLANs o hacia Internet. 
-- **Optimización de la red**. Al tener subredes más pequeñas, en entornos donde tengamos cientos o miles de equipos conectados, contendremos el broadcast en dominios más pequeños, por tanto, el rendimiento de la red será óptimo, sin tener que transmitir los mensajes de broadcast a todos los equipos conectados, lo que haría que el rendimiento de la red baje radicalmente e incluso podría llegar a colapsar. Al usar VLAN, tendremos varios dominios de difusión en el mismo switch. En redes donde el tráfico consiste en un alto porcentaje de transmisiones y multidifusiones, las VLAN pueden reducir la necesidad de enviar dicho tráfico a destinos innecesarios. 
-- **Reducción de costes**. Debido a la poca necesidad de actualizaciones de red que son demasiado costosas, y gracias a un uso más eficaz de los enlaces y del ancho de banda disponible, es posible reducir costes al realizar este tipo de redes. Las VLAN se pueden usar para crear dominios de transmisión que eliminan la necesidad de costosos routers, lo cual ayuda aún más a reducir dichos costes.
-- **Mejor eficiencia del personal de TI**. Nos facilitarán el manejo de la red, debido a que diferentes usuarios pueden compartir una misma VLAN. Cuando implementamos un nuevo switch, este implantará todas las políticas y procedimientos que tiene prestablecidos la VLAN. 
-- **Administración de aplicaciones y proyectos simples**. Estas redes pueden agregar dispositivos y usuarios para admitir ciertos requisitos geográficos o de tipo comercial. Como tienen características diferentes, se facilita mucho la administración de una aplicación concreta, o albergando proyectos diferentes.
+Una **VLAN** o *LAN Virtual* permite crear redes lógicamente independientes sobre una misma infraestructura física. Requiere el uso de switches gestionables e idealmente routers compatibles para segmentar y administrar adecuadamente el tráfico.
 
-**¿Tienen desventajas las VLAN?**
+### Ventajas principales
+* **Seguridad:** Aísla el tráfico entre redes por defecto. Para permitir la comunicación entre diferentes VLANs, es necesario implementar un router o switch multicapa (Capas 3) mediante *inter-vlan routing*.
+* **Segmentación y flexibilidad:** Permite agrupar equipos en distintas subredes fácilmente, asignando políticas específicas de comunicación y acceso a Internet.
+* **Optimización de la red:** Contiene el tráfico de *broadcast* (difusión) en dominios más pequeños. Esto evita que las transmisiones masivas saturen la red global.
+* **Reducción de costes:** Maximiza el rendimiento del ancho de banda y elimina la necesidad de adquirir hardware costoso adicional para dividir redes.
+* **Gestión eficiente:** Facilita la administración a los equipos de TI al aplicar políticas unificadas a través de los switches, además de adaptar la red a requisitos geográficos o proyectos específicos.
 
-Pese a que las VLAN ofrecen ventajas como segmentación de redes, seguridad y gestión eficiente del tráfico, también tienen una serie de desventajas que deberíamos conocer antes de su configuración:
+### Desventajas
+* **Complejidad de mantenimiento:** Requiere conocimientos avanzados tanto para su configuración como para su posterior administración.
+* **Escalabilidad limitada:** Los switches tienen un límite máximo en la cantidad de VLANs que pueden soportar.
+* **Carga en los equipos:** Gestionar múltiples VLANs en un mismo dispositivo puede ocasionar sobrecarga de procesamiento.
+* **Riesgos de seguridad:** Una mala configuración puede hacer la red vulnerable a ataques como el *VLAN hopping*.
+* **Incompatibilidad de hardware:** Todos los dispositivos de red deben admitir el estándar **802.1Q**, lo que puede exigir la renovación de equipos.
 
-**- Complejidad en el mantenimiento:** No solo la configuración e instalación requieren de conocimientos, sino también el mantenimiento, por lo que, pese a que contratemos a alguien para la puesta a punto, tendremos que tener nociones posteriores, o contratar a alguien siempre, algo que puede ser muy costosos o requerir de aprendizaje avanzado si no lo tenemos.
+### Tipos de VLAN
+* VLAN nativa
+* Etiquetado VLAN 802.1Q
+* VLAN basadas en puerto
+* VLAN basadas en MAC
+* VLAN etiquetadas
+* VXLAN
+* VLAN híbrida
+* VLAN de gestión
+* VLAN de control
+* VLAN dedicada
 
-**- Escalabilidad limitada:** Algunos switches tienen límites en la cantidad de VLANs que pueden soportar, por lo que si hablamos de gestionar muchas VLANs en grandes infraestructuras, puede ser engorroso y poco eficiente.
+---
 
-**- Problemas de rendimiento:** Si se manejan muchas VLANs en el mismo equipo (como un switch o router), podría haber sobrecarga de procesamiento, por lo que si hablamos de algo simple, puede ir muy bien, pero a nivel de escalabilidad, como comentábamos ahora, se puede poner complicado todo.
+## 2. VPN (Virtual Private Network)
 
-**- Seguridad:** Si no se implementan bien las políticas de seguridad (como el uso adecuado de VLAN hopping o storm control), una VLAN puede ser vulnerable a ataques (por ejemplo, ataques de VLAN hopping). 
+Una **VPN** o *Red Privada Virtual* es una tecnología que establece una conexión a Internet segura y cifrada entre el dispositivo del usuario y una red privada o punto de conexión de confianza.
 
-**- Compatibilidad:** Todos los dispositivos en la red deben ser compatibles con VLANs y el estándar 802.1Q. Esto podría limitar mucho las opciones de hardware, obligándonos a adquirir nuevos sustitutos, lo que se vería reflejado en un incremento de gasto.
+### Características fundamentales
+* **Virtual:** No requiere cables o enlaces físicos dedicados.
+* **Privada:** Oculta el tráfico y las actividades frente a terceros.
+* **En red:** Conecta de forma coordinada múltiples dispositivos (como el cliente y el servidor VPN).
 
-**Tipos de VLAN**
-- VLAN nativa
-- Etiquetado VLAN 802.1Q
-- VLAN basadas en puerto
-- VLAN basadas en MAC
-- VLAN etiquetadas
-- VXLAN
-- VLAN híbrida
-- VLAN de gestión
-- VLAN de control
-- VLAN dedicada
+### Pilares tecnológicos
+1. **Cifrado:** Transforma los datos en un formato ilegible (texto cifrado) mediante algoritmos criptográficos para proteger credenciales y datos confidenciales.
+2. **Tunelización:** Encapsula los paquetes de datos cifrados para que viajen de forma aislada a través de redes públicas no seguras.
+3. **Autenticación:** Valida que solo usuarios y dispositivos autorizados puedan conectarse al túnel y acceder a los recursos internos.
 
+### Ventajas principales
+* **Privacidad y anonimato:** Enmascara la dirección IP del usuario y evita el rastreo o la interceptación en redes públicas.
+* **Acceso remoto seguro:** Permite a empleados, desarrolladores y estudiantes conectarse a sistemas corporativos o educativos desde cualquier lugar.
+* **Integración con la nube:** Une de forma segura infraestructuras locales con plataformas en la nube (como Azure) mediante gateways dedicados.
+* **Cumplimiento normativo:** Ayuda a cumplir los estándares de seguridad de protección de datos en tránsito.
 
-2. **¿Qué es una VPN?**
-   Una VPN es una tecnología de red y seguridad fundamental en un mundo en el que las aplicaciones abarcan la infraestructura local y los servicios en la nube pública. A menudo se usan junto con Confianza cero y otros enfoques de seguridad modernos, las VPN encapsulan los datos en cifrado y los envían a través de un túnel protegido al que solo pueden conectarse usuarios y dispositivos autorizados.
-Una VPN (Virtual Private Network) ayuda a proteger las experiencias en línea mediante la creación de conexiones a Internet seguras y cifradas entre dispositivos de usuario y una red privada.
-
-Una VPN es una tecnología de red y seguridad fundamental en un mundo en el que las aplicaciones abarcan la infraestructura local y los servicios en la nube pública. A menudo se usan junto con Confianza cero y otros enfoques de seguridad modernos, las VPN encapsulan los datos en cifrado y los envían a través de un túnel protegido al que solo pueden conectarse usuarios y dispositivos autorizados.
-
-**¿Cómo funciona una VPN?**
-
-En lugar de enviar datos directamente a través de Internet, una red privada virtual canaliza los datos cifrados entre el dispositivo y un punto de conexión de confianza, como una red corporativa o un entorno en la nube. Un servidor VPN intermedio autentica al usuario y a su dispositivo, enmascara la dirección IP y le permite omitir los firewalls y los bloques de sitios web en Internet. Este enfoque ayuda a evitar el acceso no autorizado, la interceptación y la manipulación de datos.
-
-Por definición, una conexión VPN es:
-
-- Virtual porque no hay cables físicos implicados en el proceso de conexión.
-- Privada porque a través de esta conexión, nadie más puede ver los datos ni la actividad de exploración.
-- En red porque varios dispositivos (su ordenador y el servidor VPN) funcionan de manera conjunta para mantener el vínculo establecido.
-
-Una VPN depende de tres tecnologías clave:
-
-**Cifrado**
-El cifrado convierte los datos legibles en un formato ilegible conocido como texto cifrado. Las VPN se basan en algoritmos criptográficos sólidos para que, incluso si se interceptan datos, no se puedan entender sin las claves adecuadas. Esto protege la información confidencial, como las credenciales, la propiedad intelectual y las comunicaciones internas mientras están en tránsito.
-
-**Tunelización**
-La tunelización es el proceso de encapsular datos cifrados dentro de otro paquete de red para que puedan viajar de forma segura a través de Internet. El túnel actúa como un camino privado entre el usuario y la red de destino. La tunelización VPN ayuda a proteger el tráfico de la interceptación, especialmente en redes no seguras, como una red inalámbrica pública, donde el tráfico sin cifrar se puede observar o interceptar de otro modo.
-
-**Autenticación**
-Antes de establecer un túnel, las VPN autentican usuarios o dispositivos para confirmar que pueden conectarse. Este paso garantiza que solo los puntos de conexión aprobados obtengan acceso a los sistemas internos o a los recursos en la nube. Juntos, el cifrado, la tunelización y la autenticación forman la base de cómo funciona una red privada virtual.
-
-Las VPN suelen funcionar junto con otras tecnologías como macrodatos, inteligencia artificial y aprendizaje automático para admitir sistemas digitales seguros y escalables.
-
-**¿Cuáles son las principales ventajas de una VPN?**
-
-Las redes privadas virtuales ofrecen varias ventajas para individuos y organizaciones, especialmente a medida que los recursos y las aplicaciones se distribuyen más. Estas son algunas de las principales ventajas:
-
-- **Privacidad y seguridad mejoradas:** al cifrar el tráfico y enmascarar las direcciones IP, las VPN ayudan a proteger la privacidad del usuario y reducen la exposición en redes públicas o compartidas. Esto es especialmente importante cuando se accede a sistemas confidenciales fuera de un entorno corporativo de confianza.
-- **Mayor protección para trabajadores remotos e híbridos:** los modelos de trabajo flexibles dependen de proporcionar a los usuarios acceso seguro a los sistemas internos. Las VPN permiten a los empleados, desarrolladores y estudiantes conectarse de forma segura a redes privadas desde casi cualquier lugar sin exponer esos recursos directamente a Internet.
-- **Experiencias de cliente fluidas:** los usuarios se sienten como si sus dispositivos estuvieran conectados directamente a una red privada, aunque estén trabajando desde casa, una cafetería o un aeropuerto.
-- **Acceso más seguro a los recursos en la nube:** a medida que las organizaciones adoptan cada vez más plataformas en la nube, como Microsoft Azure, las VPN ayudan a unir los entornos locales con los servicios en la nube. Servicios seguros y basados en la nube, como VPN Gateway proporcionan conectividad cifrada entre centros de datos locales y redes virtuales de Azure.
-- **Cumplimiento mejorado y menor riesgo:** muchos marcos normativos y del sector requieren medidas de seguridad para los datos en tránsito. Las VPN admiten estos requisitos al ayudar a proteger la información confidencial a medida que se mueve entre usuarios, redes y servicios en la nube. También admiten equipos distribuidos al tiempo que permiten a las organizaciones mantener controles centralizados.
-
-**¿Cuáles son algunos tipos de VPN?**
-
-Las VPN se usan en sectores y entornos, incluidos los siguientes escenarios:
-
-- **Trabajo remoto:** las organizaciones usan VPN para proporcionar a los empleados y contratistas acceso remotos a aplicaciones internas, entornos de desarrollo y datos sin hacer que esos sistemas sean accesibles públicamente. Los empleados pueden conectarse de forma segura a las redes corporativas desde casa o mientras se desplazan, manteniendo la productividad sin poner en peligro la seguridad.
-- **Conectividad de sitio a sitio:** una VPN de sitio a sitio conecta varias ubicaciones de oficinas, como sucursales o centros de datos, a través de Internet. Esto permite a las organizaciones vincular ubicaciones de forma segura sin depender de circuitos privados costosos.
-- **Entornos híbridos y multinube:** al habilitar conexiones seguras entre la infraestructura local y los servicios en la nube, las VPN pueden admitir cargas de trabajo híbridas y multinube y una migración gradual a la nube.
-- **Entornos de desarrollador:** los desarrolladores suelen usar VPN para compilar, probar y mantener aplicaciones basadas en la nube y otras soluciones. Esto incluye soluciones con servicios cognitivos que requieren acceso seguro, cifrado y privado a las API de IA.
-- **Entornos de aprendizaje y estudiantes:** muchas universidades y escuelas se basan en VPN para proporcionar a los alumnos fuera del campus acceso a sistemas internos, como plataformas de administración del aprendizaje, bibliotecas digitales, bases de datos de investigación y entornos de laboratorio.
+### Casos de uso comunes
+* **Trabajo remoto e híbrido:** Conexión segura a datos y aplicaciones internas sin exporlos a Internet.
+* **Conectividad sitio a sitio:** Enlace entre sucursales u oficinas sin depender de líneas privadas dedicadas de alto costo.
+* **Entornos multinube e híbridos:** Interconexión de recursos locales con múltiples proveedores de nube.
+* **Entornos de desarrollo:** Acceso privado y cifrado a APIs, entornos de pruebas y servicios en la nube.
+* **Ámbito educativo:** Acceso remoto de estudiantes a bases de datos, bibliotecas digitales y plataformas académicas.
 
 3. **¿Qué es una SAN?**
    **¿Qué es una red de área de almacenamiento (SAN - Storage Area Network)?**
