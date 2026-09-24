@@ -177,6 +177,14 @@ Es una interfaz de software y conjunto de servicios de nivel de sesión desarrol
 
 Un paquete de datos en la pila TCP/IP se compone de un **encabezado IP**, un **encabezado TCP** (o UDP) y la carga útil de datos (**Payload**).
 
++-------------------------------------------------------------+
+|                       Encabezado IP                         |
++-------------------------------------------------------------+
+|                       Encabezado TCP                        |
++-------------------------------------------------------------+
+|                       Payload (Datos)                       |
++-------------------------------------------------------------+
+
 ### Componentes del Encabezado IP
 * **Versión:** IPv4 o IPv6.
 * **Longitud de cabecera:** Tamaño del encabezado para su correcta lectura.
