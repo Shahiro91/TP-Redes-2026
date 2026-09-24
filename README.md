@@ -151,6 +151,9 @@ Un **protocolo de comunicación** es un conjunto estandarizado de reglas, pautas
 ### Modelo TCP/IP
 Es la suite de protocolos estandarizada sobre la que se estructura Internet y la mayoría de las redes modernas. Divide los datos en paquetes, los transmite por rutas óptimas y los reensambla en el destino.
 
+<img width="1320" height="600" alt="TCP-IP" src="https://github.com/user-attachments/assets/f790b0e0-d932-4a31-a07f-99b176844975" />
+
+
 #### Capas del modelo TCP/IP
 1. **Acceso a la Red (Enlace):** Administra la infraestructura física y los controladores de red (cables Ethernet, Wi-Fi, tarjetas NIC) transformando los datos digitales en señales físicas.
 2. **Internet (Red):** Gestiona la direccionamiento, el enrutamiento y el flujo del tráfico entre distintas redes, asegurando la entrega eficiente de los paquetes.
@@ -177,13 +180,10 @@ Es una interfaz de software y conjunto de servicios de nivel de sesión desarrol
 
 Un paquete de datos en la pila TCP/IP se compone de un **encabezado IP**, un **encabezado TCP** (o UDP) y la carga útil de datos (**Payload**).
 
-+-------------------------------------------------------------+
-|                       Encabezado IP                         |
-+-------------------------------------------------------------+
-|                       Encabezado TCP                        |
-+-------------------------------------------------------------+
-|                       Payload (Datos)                       |
-+-------------------------------------------------------------+
+<img width="752" height="313" alt="analisis-tcp-ip-ciberseguridad-2" src="https://github.com/user-attachments/assets/384ccf4e-ac44-4100-8943-ccb719d494f1" />
+
+<img width="752" height="285" alt="analisis-tcp-ip-ciberseguridad-datagrama1" src="https://github.com/user-attachments/assets/627558c5-962f-4625-8354-197b21730ee2" />
+
 
 ### Componentes del Encabezado IP
 * **Versión:** IPv4 o IPv6.
