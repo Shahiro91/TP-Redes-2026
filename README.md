@@ -222,10 +222,14 @@ Un paquete de datos en la pila TCP/IP se compone de un **encabezado IP**, un **e
 | **GAN** | *Global Area Network* | **Cobertura global:** Infraestructura transcontinental que combina satélites y redes internacionales para dar soporte a la conectividad móvil mundial. |
 | **VPN** | *Virtual Private Network* | **Red Lógica / Arquitectura Cifrada:** No definida por distancia física, sino por construir un túnel privado, autenticado y cifrado sobre una red pública (como Internet). |
 
-**33. Experiencia en Redes:**
+## 33. Experiencia en Redes:
 ### Sergio Lezcano: 
 
-No tengo experiencia. 
+"Mi relación con las redes siempre ha sido muy práctica e intuitiva. Desde joven me interesó la tecnologia y la informática, pasando de transferir archivos por infrarrojos y Bluetooth a configurar redes locales para jugar en línea con amigos.
+
+Con el tiempo, trasladé ese interés al entorno cotidiano y laboral: he configurado cámaras de seguridad, impresoras por IP o MAC, carpetas compartidas y clientes de correo corporativo en Outlook ajustando puertos y protocolos como SMTP e IMAP. También suelo utilizar la consola de comandos de Windows (cmd) para verificar la conectividad con VPNs y diagnosticar el estado de diferentes servicios.
+
+Aunque aún no he trabajado formalmente en el área de IT/Redes, cuento con una base práctica sencilla, mucha curiosidad y una gran motivación por incursionar profesionalmente en este campo, especialmente con orientación hacia la Ciberseguridad." 
 
 ### Norberto Oscar Roth:
 
