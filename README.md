@@ -134,189 +134,85 @@ A diferencia del almacenamiento adjunto tradicional, permite superar los límite
 | **Switch** | Capa 2 (Enlace) | Dirección MAC | Red Local (LAN) | Reenvío directo al destino específico |
 | **Router** | Capa 3 (Red) | Dirección IP | Entre redes distintas (LAN/WAN) | Enrutamiento estratégico de paquetes |
 
-5. **¿Qué es un protocolo de comunicaciones?**
-   Un protocolo de comunicación es un conjunto de normas, pautas o instrucciones que sirven para guiar las acciones durante el intercambio de información.
-Tipos de protocolos de comunicación
-Existen diferentes tipos de protocolos de comunicación que se ajustan a las necesidades de cada usuario:
-
-  **1.  Protocolos punto a punto**
-Son aquellos protocolos más antiguos y tradicionales, y sirven para traspasar información entre dos computadoras.
-
-Este protocolo se encarga de garantizar la comunicación entre dos usuarios y de controlar el envío y la recepción de los datos.
-
-De esta manera, permite reenviar el mensaje original las veces que fueran necesarias hasta recibir un acuse de recibo.
-
-  **2.  Comunicación entre redes**
-Además de cumplir con las tareas del protocolo anterior, permite la comunicación de varios usuarios o servidores mediante una red local (LAN).
-
-Para hacerlo de una forma organizada, le asigna un número para identificar cada uno de los terminales que se ven implicados en el intercambio de información o datos.
-
-A su vez, cuenta con un ordenador central que se encarga de preguntar regularmente al resto de los usuarios por su funcionamiento.
-
-  **3.  Protocolos de transmisión de paquetes**
-Los paquetes son grupos de información que contienen datos que deben garantizar su llegada satisfactoria a destino.
-
-A diferencia de los dos protocolos anteriores, en este caso la responsabilidad de la transmisión está a cargo de los paquetes y sus datos y no de los equipos u ordenadores.
-
-Se les llama paquetes porque actúan de manera fragmentaria, como si fuese una carta o postal tradicional que pasa por diferentes manos y controles hasta llegar al destinatario.
-
-  **4.  Protocolos TCP/IP**
-Sus siglas significan “Transfer Control Protocol / Internet Protocol” y se trata de un protocolo de transmisión de paquetes. Es decir, que cuando una máquina necesita enviar datos a otros usuarios, los fragmenta en diferentes trozos para que estos transiten por separado.
-
-Estos paquetes se dirigen de manera independiente y contienen la información con la Red a la cual debe llegar, su remitente y su correspondiente acuse de recibo.
-
-Al existir múltiples redes posibles, los paquetes tienden a elegir el más apropiado para ese momento. De esta manera, se logra una transferencia estable y veloz.
-
-6. **TCP/IP y NetBios. Diferencias**
-   TCP/IP es un protocolo de enlace de datos que se usa en Internet para que los ordenadores y otros dispositivos envíen y reciban datos. TCP/IP son las siglas en inglés de Transmission Control Protocol/Internet Protocol (protocolo de control de transmisión/protocolo de Internet). Posibilita que los dispositivos conectados a Internet se comuniquen entre sí en varias redes.
-
-**¿Qué hace TCP/IP?**
-TCP/IP determina cómo los ordenadores transfieren datos de un dispositivo a otro. Estos datos deben ser exactos para que el receptor obtenga la misma información enviada por el emisor.
-
-¿Qué es TCP/IP y cómo funciona? Para garantizar que cada comunicación llegue intacta al destino deseado, el modelo TCP/IP divide los datos en paquetes y luego los vuelve a juntar para formar el mensaje completo en el destino. Enviar los datos en paquetes pequeños hace que sea más fácil mantener la exactitud que enviando todos los datos a la vez.
-
-Después de dividir un mensaje individual en paquetes, estos pueden recorrer diversos caminos en caso de congestión. 
-
-**¿Cómo funciona el modelo TCP/IP?**
-Cuando envía algo por Internet, ya sea un mensaje, una foto o un archivo, el modelo TCP/IP divide esos datos en paquetes según un procedimiento de cuatro capas. Los datos primero atraviesan estas capas en un sentido, y luego lo hacen en sentido contrario cuando los datos se vuelven a juntar en el destino.
-
-El modelo TCP/IP funciona porque todo el proceso está estandarizado. Sin la estandarización, la comunicación podría volverse impredecible y ralentizar las operaciones, y un Internet rápido depende de la eficiencia. Como estándar global, el modelo TCP/IP es una de las maneras más eficientes de transferir datos por Internet.
-
-**¿Cuáles son las capas del modelo TCP/IP?**
-Hay cuatro capas en el modelo TCP/IP: acceso a la red, Internet, transporte y aplicación. Conjuntamente, estas capas son un conjunto de protocolos. El modelo TCP/IP pasa los datos por estas capas en un orden concreto cuando un usuario envía información y después en el orden inverso cuando se reciben los datos.
-
-- **Capa 1: capa de acceso a la red**
-La capa de acceso a la red, también conocida como la capa de enlace a los datos, gestiona la infraestructura física que permite a los ordenadores comunicarse entre sí por Internet. Esto abarca, entre otros elementos, cables Ethernet, redes inalámbricas, tarjetas de interfaz de red y controladores de dispositivos en el ordenador.
-
-La capa de acceso a la red también incluye la infraestructura técnica, como el código que convierte datos digitales en señales transmisibles, que hacen posible una conexión.
-
-- **Capa 2: Capa de Internet**
-La capa de Internet, también llamada la capa de red, controla el flujo y el enrutamiento de tráfico para garantizar que los datos se envían de forma rápida y correcta. Esta capa también es responsable de volver a juntar el paquete de datos en el destino. Si hay mucho tráfico en Internet, esta capa puede tardar un poco más en enviar un archivo, pero es menos probable que el archivo se dañe.
-
-- **Capa 3: Capa de transporte**
-La capa de transporte es la que proporciona una conexión de datos fiable entre dos dispositivos de comunicación. Es como enviar un paquete asegurado: la capa de transporte divide los datos en paquetes, confirma los paquetes que ha recibido del remitente y se asegura de que el destinatario confirme los paquetes recibidos por su parte.
-
-- **Capa 4: Capa de aplicaciones**
-La capa de aplicaciones es el grupo de aplicaciones que permite al usuario acceder a la red. Para la mayoría de nosotros, esto significa el correo electrónico, las aplicaciones de mensajería y los programas de almacenamiento en la nube. Esto es lo que el usuario final ve y con lo que interactúa al recibir y enviar datos.
-
-**Definición de NetBIOS (protocolo de red)**
-
-Protocolo de red creado originalmente para redes locales de computadoras IBM PC.
-
-NetBIOS (Network Basic Input/Output System) es un conjunto de protocolos de nivel de sesión que proporciona tres servicios principales en redes locales:
-
-- Servicio de nombres: permite identificar dispositivos en la red mediante nombres simples y legibles, en lugar de direcciones numéricas.
-- Servicio de datagramas o paquetes: facilita el envío de mensajes sin conexión entre dispositivos.
-- Servicio de sesión: establece y gestiona conexiones orientadas a sesión para la transferencia fiable de datos.
-
-**Resumen:** NetBIOS es un conjunto de protocolos utilizados en redes locales para identificar dispositivos, enviar mensajes y gestionar sesiones de comunicación. Permite compartir recursos como archivos e impresoras de manera sencilla. Aunque su uso ha disminuido, sigue presente en entornos con equipos antiguos.
-
-**La diferencia principal es que NetBIOS es una interfaz de software para redes locales pequeñas, mientras que TCP/IP es un conjunto de protocolos globales diseñado para internet.**
-
-7. **¿Cómo está formado un paquete de datos en TCP/IP? ¿Qué es un “flag” en un paquete de TCP/IP?**
-   
-Los paquetes TCP/IP
-Cada paquete TCP/IP tiene una estructura básica compuesta por encabezados (headers).
-
-El encabezado IP actúa como la columna vertebral, proporcionando las direcciones de origen y destino, así como información sobre cómo debe ser manejado el paquete en la red. Este encabezado es crucial para los routers, ya que les permite tomar decisiones basadas en la información contenida en él.
-
-Dentro del encabezado IP, encontramos el encabezado TCP, que contiene detalles como los puertos de origen y destino, el número de secuencia y la suma de verificación hash. Esta última es esencial para verificar la integridad del paquete. Por ejemplo, los investigadores de seguridad vigilan estos encabezados en busca de anomalías que podrían indicar ataques como el escaneo de puertos o intentos de inyección de datos.
-
-Consideramos que el encabezado es la columna vertebral, los datos y el payload representan el corazón de los paquetes TCP/IP. Aquí es donde se almacena la información valiosa que se transmite a través de la red. Los ciberdelincuentes a menudo intentan infiltrarse en estos datos para robar información confidencial o llevar a cabo ataques de denegación de servicio.
-
-A continuación, podemos entender en detalle cada uno de los puntos más relevantes de las características de los paquetes TCP/IP.
-
-**Encabezado TCP / IP:**
-
-**Encabezado TCP:**
-- Puerto de origen (16 bits): Identifica la aplicación de origen en el equipo emisor.
-
-- Puerto de destino (16 bits): Identifica la aplicación de destino en el equipo receptor.
-
-- Número de secuencia (32 bits): Indica el número de orden del segmento actual dentro del flujo de datos.
-
-- Número de acuse de recibo (32 bits): Indica el número de secuencia del siguiente byte que el emisor espera recibir del receptor.
-
-- Longitud de la cabecera (4 bits): Indica la longitud del encabezado TCP en palabras de 32 bits. El tamaño mínimo es de 5 palabras (20 bytes) y puede aumentar hasta 15 palabras (60 bytes) si se incluyen opciones adicionales.
-
-- **Flags (8 bits): Conjunto de indicadores que controlan el comportamiento del protocolo TCP. Algunos de los flags más importantes son:**
-
- - URG: Indica que el segmento contiene datos urgentes que deben procesarse de inmediato.
-
- - ACK: Indica que el campo "Número de acuse de recibo" es válido.
-
- - PSH: Indica que el receptor debe enviar los datos al usuario tan pronto como los reciba.
-
- - RST: Indica que se debe reiniciar la conexión TCP.
-
- - SYN: Indica que se está iniciando una nueva conexión TCP.
-
- - FIN: Indica que se está finalizando la conexión TCP.
-
- - Ventana (16 bits): Indica la cantidad de datos que el receptor está dispuesto a recibir sin necesidad de enviar un acuse de recibo.
-
- - Suma de verificación (16 bits): Se utiliza para detectar errores en la transmisión del encabezado TCP.
-
-**Encabezado IP:**
-
-- Versión: Indica la versión del protocolo IP utilizado. Actualmente, la versión más utilizada es IPv4 (versión 4) y se está implementando gradualmente IPv6 (versión 6).
-
-- Longitud de la cabecera: Especifica la longitud del encabezado en bytes. Esta información es importante para que los routers puedan leer correctamente el encabezado y procesar el paquete.
-
-- Tipo de servicio: Define la prioridad y el tipo de tratamiento del paquete. Permite a los routers dar prioridad a ciertos tipos de paquetes, como los que contienen datos sensibles o urgentes.
-
-- Identificación: Permite la fragmentación y reensamblaje de paquetes grandes. Cuando un paquete es demasiado grande para ser transmitido por una red, se puede fragmentar en varios paquetes más pequeños. El campo de identificación permite reensamblar estos fragmentos en el destino.
-
-- Banderas: Controlan diferentes aspectos del procesamiento del paquete. Por ejemplo, una bandera puede indicar si el paquete debe ser fragmentado o si se requiere un acuse de recibo.
-
-- Tiempo de vida: Limita el tiempo que un paquete puede permanecer en la red. Esto evita que los paquetes circulen indefinidamente en caso de errores en el enrutamiento.
-
-- Protocolo: Identifica el protocolo de la capa de transporte utilizado (TCP o UDP). Esta información permite al dispositivo receptor saber cómo interpretar los datos del payload.
-
-- Suma de comprobación: Garantiza la integridad del encabezado. Si la suma de comprobación no es válida, el paquete se descarta.
-
-- Dirección IP de origen: Indica la dirección del dispositivo que envía el paquete.
-
-- Dirección IP de destino: Indica la dirección del dispositivo que recibe el paquete.
-  
-
-8. **Defina la red según su geografía. Explicar distintas variantes.**
-   Las redes informáticas se clasifican principalmente en función de la extensión del área física que cubren y los medios de transmisión empleados para interconectar sus nodos:
-
-**Red LAN (Local Area Network)**
-La Red de Área Local (LAN) conecta dispositivos en un espacio geográfico limitado y controlado, como una vivienda, una oficina corporativa o un edificio de servidores. Suelen utilizar tecnologías cableadas como Ethernet o estándares inalámbricos de alta fidelidad para facilitar la comunicación a alta velocidad y con baja latencia entre dispositivos cercanos.
-
-En una configuración típica de oficina, los terminales e impresoras se interconectan mediante un conmutador (switch) o un enrutador central (router). Cada dispositivo dispone de una dirección física MAC y una dirección lógica IP única, empleadas para identificar el flujo de paquetes dentro del segmento local. Este entorno resulta idóneo para compartir recursos de forma rápida, implementando medidas de ciberseguridad perimetral como firewalls locales, aislamiento de subredes y políticas de acceso restrictivas.
-
-**Red WAN (Wide Area Network)**
-La Red de Área Amplia (WAN) abarca extensiones geográficas masivas, interconectando ciudades, provincias o países enteros. Las WAN enlazan múltiples subredes dispersas combinando tecnologías de transporte públicas y dedicadas, tales como tendidos de fibra óptica transoceánica, enlaces de radio microondas y conexiones satelitales. El ejemplo más representativo y masivo de una red de tipo WAN es la propia red global Internet.
-
-**Red WLAN (Wireless Local Area Network)**
-La Red de Área Local Inalámbrica (WLAN) consiste en una variación elástica de la red LAN tradicional que prescinde de los cables físicos para realizar la conexión. Emplea ondas de radio mediante el estándar Wi-Fi y resulta indispensable en entornos donde realizar un cableado estructurado no es viable o práctico, como cafeterías, aeropuertos, almacenes y oficinas dinámicas. Sus ventajas estratégicas incluyen:
-
-- Movilidad completa: Los terminales se desplazan libremente por la zona de cobertura sin interrumpir la persistencia de las sesiones de datos.
-- Agilidad de despliegue: La puesta en marcha de los puntos de acceso (APs) inalámbricos reduce los tiempos y costes de instalación física en obra.
-- Escalabilidad elástica: Admite la incorporación fluida de nuevos usuarios e instancias sin necesidad de alterar la infraestructura de puertos físicos.
-- Versatilidad en el acceso remoto: Facilita la salida segura hacia internet o redes corporativas privadas mediante la integración de pasarelas de autenticación.
-
-Su despliegue exige una monitorización constante para gestionar las interferencias de señal, proteger el perímetro radioeléctrico contra intrusiones no autorizadas y optimizar el ancho de banda para mitigar cuellos de botella.
-
-**Red MAN (Metropolitan Area Network)**
-La Red de Área Metropolitana (MAN) posee un alcance geográfico intermedio: cubre áreas metropolitanas densas, como un campus universitario distribuido o un término municipal completo. Conectan de forma eficiente múltiples redes LAN locales entre sí y son utilizadas habitualmente por administraciones públicas o proveedores de telecomunicaciones para desplegar redes de servicios unificados en grandes núcleos urbanos.
-
-**Red VPN (Virtual Private Network)**
-Una Red Privada Virtual (VPN) es una arquitectura lógica de red que construye una capa de comunicación cifrada y privada utilizando como canal una infraestructura de transporte pública, como internet. Es la solución estándar del mercado para permitir el teletrabajo seguro, garantizando que el personal acceda a los recursos del servidor corporativo desde ubicaciones remotas de manera hermética. Sus pilares de protección se basan en:
-
-- Cifrado de datos de extremo a extremo: Aplica algoritmos criptográficos robustos para codificar la información en origen, asegurando que si los paquetes son interceptados en tránsito resulten indescifrables para terceros.
-- Túnel de comunicación seguro (Tunneling): Encapsula el tráfico legítimo de la red aislándolo por completo del resto del tráfico público de internet, blindándolo contra ataques de manipulación o inyección de datos.
-- Autenticación y autorización estricta: Valida minuciosamente las credenciales e identidad de los dispositivos antes de habilitar el acceso al perímetro privado del negocio.
-- Privacidad de navegación: Oculta la dirección IP real del cliente y enmascara su localización geográfica, mitigando el rastreo de actividad por parte de operadores externos.
-
-**Red PAN (Personal Area Network)**
-La Red de Área Personal (PAN) es un entorno de conectividad de cortísimo alcance (típicamente pocos metros) enfocado en vincular los dispositivos de uso individual de un mismo usuario, tales como teléfonos inteligentes, portátiles, periféricos inalámbricos y sensores biométricos mediante protocolos eficientes de baja potencia como Bluetooth, Zigbee o conexiones físicas de interfaz USB.
-
-**Red GAN (Global Area Network)**
-La Red de Área Global (GAN) representa el peldaño definitivo en la escala de conectividad. Es una infraestructura global interconectada que da soporte a las comunicaciones móviles transcontinentales, unificando redes WAN mediante infraestructuras globales de satélite y redes de telecomunicaciones internacionales.
+## 5. Protocolos de Comunicación
+
+Un **protocolo de comunicación** es un conjunto estandarizado de reglas, pautas e instrucciones que rigen el intercambio de información entre sistemas informáticos.
+
+### Tipos de protocolos
+1. **Punto a punto:** Diseñados para transferir información directamente entre dos equipos. Gestionan el envío, recepción y retransmisión de mensajes hasta recibir un acuse de recibo (*ACK*).
+2. **Comunicación entre redes:** Permiten la interacción de múltiples usuarios en una red local (LAN). Utilizan identificadores para cada terminal y coordinan el tráfico de forma organizada.
+3. **De transmisión de paquetes:** Centran el control de la transmisión en los propios paquetes de datos y sus metadatos (en lugar de en los nodos). La información se fragmenta y viaja de manera independiente hasta el destino.
+4. **TCP/IP:** Protocolo basado en la transmisión de paquetes. Divide la información en fragmentos independientes que eligen la ruta más eficiente según el estado de la red, garantizando estabilidad y velocidad.
+
+---
+
+## 6. TCP/IP vs. NetBIOS
+
+### Modelo TCP/IP
+Es la suite de protocolos estandarizada sobre la que se estructura Internet y la mayoría de las redes modernas. Divide los datos en paquetes, los transmite por rutas óptimas y los reensambla en el destino.
+
+#### Capas del modelo TCP/IP
+1. **Acceso a la Red (Enlace):** Administra la infraestructura física y los controladores de red (cables Ethernet, Wi-Fi, tarjetas NIC) transformando los datos digitales en señales físicas.
+2. **Internet (Red):** Gestiona la direccionamiento, el enrutamiento y el flujo del tráfico entre distintas redes, asegurando la entrega eficiente de los paquetes.
+3. **Transporte:** Proporciona una conexión de datos fiable de extremo a extremo (mediante la fragmentación, verificación y acuse de recibo de los paquetes).
+4. **Aplicación:** Conjunto de protocolos que ofrecen servicios de red directos al usuario o a los programas (correo electrónico, la web, almacenamiento en la nube).
+
+### NetBIOS
+Es una interfaz de software y conjunto de servicios de nivel de sesión desarrollado originalmente para pequeñas redes locales (LAN). Proporciona:
+* **Servicio de nombres:** Identifica dispositivos con nombres legibles en lugar de direcciones numéricas.
+* **Servicio de datagramas:** Permite el envío de mensajes simples sin conexión.
+* **Servicio de sesión:** Establece y mantiene conexiones orientadas a sesión para compartir archivos e impresoras.
+
+### Diferencia clave
+
+| Característica | NetBIOS | TCP/IP |
+| :--- | :--- | :--- |
+| **Alcance** | Redes locales pequeñas (LAN) o entornos heredados. | Estándar global (LAN, WAN e Internet). |
+| **Nivel** | Interfaz de software / Capa de sesión. | Conjunto de protocolos multicapa completo. |
+| **Escalabilidad** | Limitada; dependiente de difusión local. | Alta; diseñado para enrutamiento entre redes masivas. |
+
+---
+
+## 7. Estructura de un Paquete TCP/IP y "Flags"
+
+Un paquete de datos en la pila TCP/IP se compone de un **encabezado IP**, un **encabezado TCP** (o UDP) y la carga útil de datos (**Payload**).
+
+### Componentes del Encabezado IP
+* **Versión:** IPv4 o IPv6.
+* **Longitud de cabecera:** Tamaño del encabezado para su correcta lectura.
+* **Tipo de servicio (ToS/QoS):** Define la prioridad del paquete.
+* **Identificación y Banderas:** Controlan la fragmentación y reensamblado de paquetes grandes.
+* **Tiempo de Vida (TTL):** Límite de saltos para evitar que los paquetes circulen indefinidamente.
+* **Protocolo:** Especifica el protocolo de la capa superior (ej. TCP o UDP).
+* **Suma de comprobación:** Valida la integridad del encabezado IP.
+* **Direcciones IP:** Especifican el origen y el destino.
+
+### Componentes del Encabezado TCP
+* **Puertos de Origen y Destino:** Identifican las aplicaciones emisoras y receptoras.
+* **Número de secuencia y Acuse de recibo (ACK):** Mantienen el orden de los datos y confirman la recepción.
+* **Longitud de la cabecera y Ventana:** Especifican el tamaño del encabezado y el control de flujo de datos.
+* **Suma de verificación:** Comprueba la integridad del segmento TCP.
+* **Flags (6 bits de control):** Indicadores que gestionan el estado y comportamiento de la conexión TCP:
+  * **SYN:** Inicia una nueva conexión (*Handshake*).
+  * **ACK:** Confirma la recepción válida de un paquete o número de secuencia.
+  * **FIN:** Solicita la finalización ordenada de la conexión.
+  * **RST:** Reinicia la conexión de manera abrupta ante un fallo o error.
+  * **PSH:** Solicita la entrega inmediata de los datos a la aplicación sin esperar a llenar el búfer.
+  * **URG:** Indica que el segmento contiene información urgente que debe procesarse prioritariamente.
+
+---
+
+## 8. Clasificación de Redes según su Geografía
+
+| Red | Denominación | Alcance y Descripción |
+| :--- | :--- | :--- |
+| **PAN** | *Personal Area Network* | **Corto alcance (pocos metros):** Conecta dispositivos de uso personal (smartphones, periféricos) mediante Bluetooth, USB o Zigbee. |
+| **LAN** | *Local Area Network* | **Espacio limitado (oficinas, casas, edificios):** Ofrece alta velocidad y baja latencia mediante conexiones cableadas (Ethernet) o locales. |
+| **WLAN** | *Wireless LAN* | **Variante inalámbrica de la LAN:** Utiliza ondas de radio (Wi-Fi), proporcionando movilidad, agilidad de despliegue y escalabilidad. |
+| **MAN** | *Metropolitan Area Network* | **Área metropolitana (ciudades, campus universitarios):** Interconecta múltiples LANs dentro de una misma zona geográfica densa. |
+| **WAN** | *Wide Area Network* | **Extensiones masivas (países, continentes):** Une subredes dispersas a través de fibra óptica, satélites y microondas. El ejemplo principal es **Internet**. |
+| **GAN** | *Global Area Network* | **Cobertura global:** Infraestructura transcontinental que combina satélites y redes internacionales para dar soporte a la conectividad móvil mundial. |
+| **VPN** | *Virtual Private Network* | **Red Lógica / Arquitectura Cifrada:** No definida por distancia física, sino por construir un túnel privado, autenticado y cifrado sobre una red pública (como Internet). |
 
 **33. Experiencia en Redes:**
 ### Sergio Lezcano: 
