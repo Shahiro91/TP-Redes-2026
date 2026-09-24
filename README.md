@@ -68,107 +68,71 @@ Una **VPN** o *Red Privada Virtual* es una tecnología que establece una conexi�
 * **Entornos de desarrollo:** Acceso privado y cifrado a APIs, entornos de pruebas y servicios en la nube.
 * **Ámbito educativo:** Acceso remoto de estudiantes a bases de datos, bibliotecas digitales y plataformas académicas.
 
-3. **¿Qué es una SAN?**
-   **¿Qué es una red de área de almacenamiento (SAN - Storage Area Network)?**
-Una red de área de almacenamiento (SAN) es una red dedicada que se adapta a un entorno específico, que combina servidores, sistemas de almacenamiento, conmutadores de red, software y servicios.
+## 3. SAN (Storage Area Network)
 
-**¿Por qué son importantes las redes SAN?**
-Es posible que la memoria de la computadora y los recursos de almacenamiento local no proporcionen suficiente capacidad de almacenamiento, protección de almacenamiento, acceso de múltiples usuarios o velocidad y rendimiento para las aplicaciones empresariales. Por lo tanto, la mayoría de las organizaciones emplean algún tipo de SAN además del almacenamiento adjunto de red (NAS) para mejorar la eficiencia y la gestión de datos.
+Una **SAN** es una red dedicada y de alta velocidad que conecta servidores con sistemas de almacenamiento compartido (matrices de discos, unidades SSD/HDD o bibliotecas de cintas) mediante hardware y software especializado (como *Fibre Channel*).
 
-**¿Cuáles son las ventajas de una red SAN?**
-La SAN libera el dispositivo de almacenamiento para que no esté en un bus de servidor en concreto. Conecta el almacenamiento directamente a la red, externalizando y distribuyendo funcionalmente el almacenamiento en toda la organización.
+### Importancia
+A diferencia del almacenamiento adjunto tradicional, permite superar los límites de capacidad local, optimizar la protección de datos, gestionar el acceso multiusuario de gran escala y ofrecer alto rendimiento para aplicaciones empresariales junto a esquemas NAS.
 
-- Disponibilidad mejorada de las aplicaciones
-El almacenamiento existe independientemente de las aplicaciones y es accesible a través de múltiples rutas para mayor confiabilidad, disponibilidad y capacidad de servicio.
+### Ventajas principales
+* **Disponibilidad mejorada:** El almacenamiento es independiente de las aplicaciones y accesible a través de múltiples rutas de conexión.
+* **Rendimiento optimizado:** Descarga el procesamiento de almacenamiento de los servidores de aplicaciones hacia una red independiente.
+* **Gestión centralizada y consolidada:** Simplifica la administración al unificar los medios de almacenamiento, permitiendo mayor escalabilidad y flexibilidad.
+* **Recuperación ante desastres:** Facilita la creación de copias remotas de datos para protección contra ataques o fallos graves.
 
-- Mejor rendimiento de las aplicaciones
-Las SAN descargan y mueven el procesamiento de almacenamiento de servidores a redes separadas.
+### Formas de interacción en la SAN
+* **Servidor a Almacenamiento:** Acceso directo y simultáneo de múltiples servidores a los mismos recursos de almacenamiento.
+* **Servidor a Servidor:** Comunicación directa de alta velocidad y baja latencia entre servidores.
+* **Almacenamiento a Almacenamiento:** Mapeo, migración y respaldo de datos directamente entre dispositivos de almacenamiento sin saturar la CPU del servidor.
 
-- Centralizado y consolidado
-Las SAN permiten una gestión más sencilla, escalabilidad, flexibilidad y alta disponibilidad.
+### Componentes principales
+* **Servidores:** Plataformas que ejecutan las aplicaciones corporativas.
+* **Sistemas de almacenamiento:** Discos (HDD/SSD/Flash) y bibliotecas de cintas.
+* **Infraestructura de red:** Componentes de interconexión físicos (conmutadores, directores, enrutadores, Fibre Channel) y software de gestión centralizada.
 
-- Transferencia y almacenamiento de datos de sitios remotos
-Las SAN protegen los datos contra desastres y ataques maliciosos con una copia remota.
+---
 
-- Gestión centralizada sencilla
-Las SAN simplifican la gestión creando imágenes únicas de los medios de almacenamiento.
+## 4. Comparativa de Dispositivos de Red
 
-**¿Cómo funciona una SAN?**
-A veces llamada la red detrás de los servidores, una SAN incluye una infraestructura de comunicación que proporciona conexiones físicas y permite que un dispositivo cualquiera se conecte a través de la red mediante elementos interconectados, como conmutadores y ordenadores.
+### 1. Repetidor (Repeater)
+* **Capa OSI:** Capa 1 (Física).
+* **Función:** Captura y regenera/amplifica la señal (cableada o inalámbrica) para extender el alcance físico del segmento de red.
+* **Características:** Cuenta generalmente con solo dos puertos. No inspecciona ni filtra el tráfico.
 
-**Las redes SAN actuales crean nuevos métodos para conectar almacenamiento a servidores, lo que permite una alta disponibilidad y mejoras de rendimiento.** Conectan matrices de almacenamiento compartido y bibliotecas de cintas a múltiples servidores utilizados por servidores en clúster para conmutación por error. Y pueden evitar los cuellos de botella tradicionales del tráfico de red, facilitando transferencias de datos directas y de alta velocidad entre servidores y dispositivos de almacenamiento de tres maneras:
+### 2. Hub (Concentrador)
+* **Capa OSI:** Capa 1 (Física).
+* **Función:** Actúa como punto de conexión central multiport para múltiples dispositivos dentro de una LAN.
+* **Características:**
+  * Reenvía los paquetes entrantes a todos sus puertos indiscriminadamente (difusión general).
+  * Trabaja en modo *semidúplex*, compartiendo un único dominio de colisión entre todos los puertos, lo que puede provocar congestión.
+  * Funciona internamente como un repetidor multipuerto básico.
 
+### 3. Switch (Conmutador)
+* **Capa OSI:** Capa 2 (Enlace de datos).
+* **Función:** Conecta múltiples dispositivos en una red local (LAN) de forma inteligente.
+* **Características:**
+  * Utiliza **direcciones MAC** para enviar datos únicamente al dispositivo de destino específico.
+  * Crea canales dedicados para cada conexión, eliminando los dominios de colisión y optimizando el rendimiento del tráfico interno.
 
+### 4. Router (Enrutador)
+* **Capa OSI:** Capa 3 (Red).
+* **Función:** Interconecta diferentes redes independientes entre sí (por ejemplo, una LAN corporativa con Internet).
+* **Características:**
+  * Utiliza **direcciones IP** y tablas de enrutamiento para determinar la trayectoria óptima de los datos.
+  * Permite la segmentación en subredes (*subnetting*), gestión de ancho de banda y priorización de tráfico.
+  * Incorpora funciones avanzadas de seguridad como firewalls e inspección de tráfico.
 
-- De servidor a almacenamiento
-La ventaja de este modelo de interacción tradicional es que varios servidores pueden acceder al mismo dispositivo de almacenamiento en serie o simultáneamente.
+---
 
-- De servidor a servidor
-Los servidores pueden usar un SAN para facilitar comunicaciones de alta velocidad, baja latencia y alto volumen.
+### Resumen comparativo de dispositivos
 
-- De almacenamiento a almacenamiento
-La capacidad de mover datos sin la intervención del servidor libera ciclos de procesador del servidor para otras actividades, como el procesamiento de aplicaciones. Los ejemplos incluyen un dispositivo de unidad de disco que realiza copias de seguridad de sus datos en un dispositivo de cinta sin intervención del servidor o un dispositivo remoto que se refleja en la SAN.
-
-**Componentes de una SAN**
-Los componentes principales de una SAN son servidores, almacenamiento e infraestructura de red.
-
-- Servidores
-La infraestructura de servidor es la razón subyacente de todas las soluciones SAN y esta infraestructura incluye una combinación de plataformas de servidor. Con iniciativas como la consolidación de servidores y el comercio por Internet, aumenta la necesidad de SAN, lo que hace que la importancia del almacenamiento en red sea mayor.
-
-- Almacenamiento
-Un sistema de almacenamiento puede constar de sistemas de disco y sistemas de cinta. El sistema de disco puede incluir HDD, SSD o unidades flash. El sistema de cinta puede estar compuesto por unidades de cinta, cargadores automáticos de cintas y bibliotecas de cintas.
-
-- Infraestructura de red
-La conectividad SAN consta de componentes de hardware y software que interconectan dispositivos de almacenamiento y servidores, incluido Fibre Channel. El hardware puede incluir concentradores, conmutadores, puertas de enlace, directores y enrutadores. El software incluye software de gestión SAN.
-
-4. **Diferencias entre un Hub, Repetidor, Router y SWITCH. Explicar las diferencias.**
-   Los hubs, routers y switches son los dispositivos de red más comunes utilizados en la construcción de redes, pero tienen diferencias en cuanto a funciones, escenarios de aplicación y gestión y configuración.
-
-**¿Qué es un Hub?**
-Un hub es un dispositivo de red que opera en la capa física del modelo OSI, diseñado para interconectar múltiples dispositivos dentro de una red local (LAN). Como punto de conexión central de una red, el hub se encarga de enviar paquetes entre dispositivos, pero no puede detectar la dirección de destino, solo puede copiarlos y transmitirlos a todos los dispositivos conectados.
-
-Los hubs funcionan en modo semidúplex, lo que significa que todos los dispositivos conectados comparten un dominio de colisión, lo que puede provocar posibles colisiones de datos y afectar el rendimiento de la red. Por eso, los hubs suelen ser más adecuados para redes pequeñas como las domésticas o las de pequeñas oficinas.
-
-**¿Qué es un Router?**
-Un router es un dispositivo de red crucial que opera en la capa de red del modelo OSI y se encarga de enrutar paquetes de datos entre diferentes redes. Su función principal es determinar la mejor ruta para los datos a través de la red mediante tablas de enrutamiento y protocolos como el IP (Internet Protocol). Además de conectar dispositivos dentro de una red local (LAN), los routers también facilitan la conexión a redes externas como Internet.
-
-**Router vs. Hub**
-En comparación con el hub, el router es más complejo y tiene funcionalidades más avanzadas. Sus principales ventajas incluyen:
-
-- **Enrutamiento de paquetes:** El router puede dirigir eficientemente los paquetes de datos entre diferentes redes utilizando direcciones IP, optimizando así la transmisión de datos.
-- **Segmentación de redes:** Permite dividir la red en subredes más pequeñas (subnetting), lo cual mejora la organización y la gestión del tráfico.
-- **Mayor seguridad:** Proporciona funciones de firewall y filtros de paquetes para proteger la red contra accesos no autorizados y ataques externos.
-Gestión del ancho de banda: Permite controlar y priorizar el tráfico de datos, garantizando un uso eficiente del ancho de banda disponible.
-
-En resumen, el router no solo facilita la conectividad entre diferentes redes, sino que también proporciona seguridad avanzada, gestión de tráfico optimizada y funciones adicionales que son esenciales para redes modernas y complejas.
-
-**¿Qué es un Switch?**
-Un switch es un dispositivo de red utilizado para conectar varios dispositivos dentro de una red de área local (LAN). Funciona en la capa de enlace de datos (Capa 2) del modelo OSI y utiliza direcciones MAC para reenviar tramas de datos al dispositivo de destino apropiado.
-
-Los switches están diseñados para gestionar de forma eficiente e inteligente el tráfico de red creando una vía de comunicación dedicada entre los dispositivos emisor y receptor, optimizando así la transferencia de datos dentro de la red. Se utilizan habitualmente en hogares, empresas y centros de datos para conectar ordenadores, impresoras, servidores y otros dispositivos en red, facilitando una comunicación fluida y el uso compartido de recursos.
-
-**Switch vs. Hub**
-La diferencia principal entre un switch y un hub reside en cómo manejan y transmiten los datos dentro de una red. Un switch opera en la capa de enlace de datos del modelo OSI y utiliza direcciones MAC para enviar datos directamente al dispositivo de destino, lo cual optimiza el rendimiento y reduce colisiones en la red. En contraste, un hub opera en la capa física del modelo OSI y transmite datos a todos los dispositivos conectados indiscriminadamente, lo que puede causar congestión y disminuir la eficiencia de la red al generar colisiones de datos.
-
-En resumen, un switch es más eficiente y adecuado para redes modernas que requieren mayor velocidad y gestión del tráfico, mientras que un hub es más básico y se utiliza en configuraciones simples donde no se necesita un rendimiento avanzado.
-
-**Switch vs. Router**
-La diferencia principal entre un switch y un router radica en sus funciones y cómo manejan el tráfico dentro de una red.
-
-Un switch opera en la capa de enlace de datos del modelo OSI y se utiliza para conectar dispositivos dentro de una misma red local (LAN), optimizando la transferencia de datos al enviar los paquetes únicamente al dispositivo de destino, lo cual mejora la eficiencia y velocidad de la red local.
-
-En cambio, un router opera en la capa de red del modelo OSI y se encarga de enrutar paquetes de datos entre redes diferentes, utilizando direcciones IP para determinar la mejor ruta de entrega, lo cual es esencial para conectar redes locales entre sí o a internet, gestionando y filtrando el tráfico para asegurar que los datos lleguen al destino correcto de manera segura.
-
-Necesitas un router cuando quieres conectar dos o más redes. Un switch sólo puede conectar dispositivos dentro de una misma red, mientras que un router puede dirigir datos entre redes. Si tienes varias redes, por ejemplo una doméstica y otra de oficina, necesitarás un router para conectarlas.
-
-**Repetidor (Repeater)**
-Es un dispositivo electrónico que conecta dos segmentos de una misma red, transfiriendo el tráfico de uno a otro extremo, bien por cable o inalámbrico.
-El Repetidor amplifica la señal de la red LAN inalámbrica desde el router al ordenador. Un Receptor, por tanto, actúa sólo en el nivel físico o capa 1 del modelo OSI.
-
-**Diferencias principales entre Repetidor y Hub**
-- Número de puertos: El repetidor tradicional tiene solo dos puertos (sirve para conectar y extender dos tramos de cable o zonas de red). El hub tiene múltiples puertos (permite conectar muchos equipos a la vez).
-- Alcance vs. Conectividad: El objetivo principal del repetidor es extender la distancia física de una señal de red. El objetivo principal del hub es centralizar y conectar varios equipos en una estrella lógica de red. 
-- Relación técnica: Todo hub es, en la práctica, un repetidor de múltiples entradas y salidas, pero un repetidor clásico no actúa como un centro de conexión múltiple de computadoras. 
+| Dispositivo | Capa OSI | Identificación utilizada | Ámbito de trabajo | Manejo del tráfico |
+| :--- | :--- | :--- | :--- | :--- |
+| **Repetidor** | Capa 1 (Física) | Ninguna | Extensión de tramo | Regenera y amplifica la señal |
+| **Hub** | Capa 1 (Física) | Ninguna | Red Local (LAN) | Difusión a todos los puertos (*Broadcast*) |
+| **Switch** | Capa 2 (Enlace) | Dirección MAC | Red Local (LAN) | Reenvío directo al destino específico |
+| **Router** | Capa 3 (Red) | Dirección IP | Entre redes distintas (LAN/WAN) | Enrutamiento estratégico de paquetes |
 
 5. **¿Qué es un protocolo de comunicaciones?**
    Un protocolo de comunicación es un conjunto de normas, pautas o instrucciones que sirven para guiar las acciones durante el intercambio de información.
